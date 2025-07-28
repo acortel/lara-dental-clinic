@@ -1,0 +1,20 @@
+<div class="container">
+    <slot />
+</div>
+
+<style>
+    .container {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;  
+        padding-right: 2rem;
+    }
+
+    @media (min-width: 768px) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    }
+</style>
