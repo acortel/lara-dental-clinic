@@ -26,8 +26,14 @@ const { class: extraClass, href, text } = Astro.props
     }
 
     .hero-cta {
-        padding: 1.5rem 2rem;
+        padding: 1.2rem 2.75rem;
         font-size: 2.25rem;
+    }
 
+    @media (max-width: 768px) {
+        .hero-cta {
+            padding: 0.625rem 1.5rem;
+            font-size: 1.25rem;
+        }
     }
 </style>
