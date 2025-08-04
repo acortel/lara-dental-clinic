@@ -1,0 +1,106 @@
+---
+import Container from "./Container.astro";
+import Accordion from "./Accordion.astro";
+---
+
+<section id="dentist">
+    <Container>
+        <div class="dentist-container">
+            <div class="about-dentist">
+                <h2>Meet the Dentist</h2>
+                <h3>Dr. Larissa Salinas</h3>
+                <p>With a gentle touch and a heart for families, our dentist brings years of experience in providing quality care to patients of all ages. Known for her calm and friendly approach, she takes time to listen, explain, and make sure every visit feels comfortable and reassuring. From routine cleanings to more advanced care, you can count on expert hands and a genuine passion for healthy, happy smiles.</p>
+                <Accordion/>
+            </div>
+            <div class="dentist-image">
+                <img src="images/dentist-img.jpg" alt="Dr. Larissa Salinas Portrait photo" />
+            </div>
+        </div>
+    </Container>
+</section>
+
+<style>
+    #dentist {
+        padding: 0 3.75rem;
+        /* border: 1px solid black; */
+    }
+
+    .dentist-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        gap: 1.5rem;
+        /* border: 1px solid black; */
+        height: fit-content;
+    }
+
+    .about-dentist {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .dentist-image {
+        flex: 1;
+        display: flex;
+        align-items: stretch;
+    }
+
+    .dentist-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .about-dentist h2{
+        font-family: "Orelega One", serif;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+
+    .about-dentist h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-dentist p {
+        font-size: 1.125rem;
+        max-width: 600px;
+    }
+
+    @media (max-width: 768px) {
+        #dentist {
+            padding: 3.375rem 1.5rem;
+        }
+
+        .dentist-container {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: .75rem;
+        }
+
+        .dentist-image {
+            order: 1;
+        }
+
+        .about-dentist {
+            order: 2;
+        }
+
+        .about-dentist h2 {
+            font-size: 2rem;
+        }
+
+        .about-dentist h3 {
+            font-size: 1.25rem;
+        }
+
+        .about-dentist p {
+            font-size: .875rem;
+            text-align: justify;
+        }
+    }
+</style>

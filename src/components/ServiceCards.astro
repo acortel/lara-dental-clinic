@@ -1,0 +1,125 @@
+---
+const services = [
+    {
+        title: "Oral Examination",
+        description: "A thorough check-up to assess your teeth, gums, and overall oral health.",
+        icon_src: "icons/oral-exam.png"
+    }, 
+    {
+        title: "Orthodentic Treatment (Braces)",
+        description: "Helps straighten teeth and improve bite using custom-fitted braces.",
+        icon_src: "icons/braces.png"
+    },
+    {
+        title: "Oral Prophylaxis (Cleaning)",
+        description: "Professional cleaning to remove plaque, tartar, and keep your smile fresh.",
+        icon_src: "icons/cleaning.png"
+    },
+    {
+        title: "Tooth Restoration (Pasta)",
+        description: "Repairs cavities and restores damaged teeth with tooth-colored fillings.",
+        icon_src: "icons/pasta.png"
+    },
+    {
+        title: "Dentures",
+        description: "Custom-made removable replacements for missing teeth to bring back your smile.",
+        icon_src: "icons/dentures.png"
+    },
+    {
+        title: "Tooth Extraction",
+        description: "Safe and gentle removal of teeth when needed for health or comfort.",
+        icon_src: "icons/tooth-extract.png"
+    },
+    {
+        title: "Jacket Crown",
+        description: "A protective cap placed over a tooth to restore its shape and strength.",
+        icon_src: "icons/jacket-crown.png"
+    }
+];
+---
+
+<div class="service-cards" >
+    {services.map((item, index) => (
+        <div class="service-item" data-index={index}>
+            <div class="service-icon">
+                <img src={item.icon_src} alt={`${item.title} icon`} />
+            </div>
+            <h3 class="service-title">{item.title}</h3>
+            <p class="service-description">{item.description}</p>
+        </div>
+    ))}
+</div>
+
+<style>
+    .service-cards {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .service-item {
+        background-color: #89cff0;
+        border-radius: 20px;
+        width: 250px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 1.5rem;
+    }
+
+    .service-item h3,
+    .service-item p {
+        text-align: center;
+    }
+
+    .service-item h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .service-item p {
+        font-size: .75rem;
+
+    }
+
+    .service-icon {
+        background-color: white;
+        border-radius: 100%;
+        overflow: hidden;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #E5E5E5;
+    }
+
+    .service-icon img {
+        width: 90%;
+        max-width: 100px;
+        height: auto;
+        transform: translate(5%, 10%);
+    }
+
+    @media (max-width: 768px) {
+        .service-icon {
+            width: 70px;
+            height: 70px;
+        }
+
+        .service-item {
+            width: 200px;
+            height: fit-content;
+        }
+
+        .service-item h3 {
+            font-size: 1rem;
+        }
+
+        .service-item p {
+            font-size: .75rem
+        }
+    }
+</style>
