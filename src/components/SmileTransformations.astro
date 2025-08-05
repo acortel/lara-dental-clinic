@@ -1,13 +1,13 @@
 ---
 import Container from "./Container.astro";
-import TransformationSlider from "./TransformationSlider.astro";
+import TransformationSlider from "./TransformationSlider.jsx";
 ---
 
 <section id="smile-transformations">
     <Container>
         <div class="smile-trans-container">
             <h2>Changing Smiles, Changing Lives</h2>
-            <TransformationSlider />
+            <TransformationSlider client:load/>
         </div>
     </Container>
 </section>
@@ -29,5 +29,21 @@ import TransformationSlider from "./TransformationSlider.astro";
         font-family: "Orelega One", serif;
         font-size: 2.5rem;
         font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+        #smile-transformations {
+            padding: 3.375rem 1.5rem;
+        }
+
+        .smile-trans-container {
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .smile-trans-container h2 {
+            font-size: 1.5rem;
+            text-align: center;
+        }
     }
 </style>
