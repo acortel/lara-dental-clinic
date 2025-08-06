@@ -1,6 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Container from "./Container.astro";
 import Accordion from "./Accordion.astro";
+import dentistImage from "../assets/images/dentist-img.jpg"
 ---
 
 <section id="dentist">
@@ -20,10 +22,11 @@ import Accordion from "./Accordion.astro";
         <Accordion />
       </div>
       <div class="dentist-image">
-        <img
+        <!-- <img
           src="images/dentist-img.jpg"
           alt="Dr. Larissa Salinas Portrait photo"
-        />
+        /> -->
+        <Image src={dentistImage} alt="Dr. Larissa Salinas Portrait photo" />
       </div>
     </div>
   </Container>

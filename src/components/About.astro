@@ -1,15 +1,18 @@
 ---
+import { Image } from "astro:assets";
 import Container from "./Container.astro";
+import aboutImage from '../assets/images/about-img.jpg';
 ---
 
 <section id="about">
   <Container>
     <div class="about-container">
       <div class="about-img">
-        <img
+        <!-- <img
           src="images/about-img.jpg"
           alt="Dr. Lara with her smiling patient"
-        />
+        /> -->
+        <Image src={aboutImage} alt="Dr. Lara with her smiling patient" />
       </div>
       <div class="about-text">
         <h2>Committed to Caring Smiles and Lasting Trust</h2>

@@ -3,6 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import "./TransformationSlider.css";
+import { Image } from "astro:assets";
 
 const transformations = [
   {
