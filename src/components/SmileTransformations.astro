@@ -4,46 +4,46 @@ import TransformationSlider from "./TransformationSlider.jsx";
 ---
 
 <section id="smile-transformations">
-    <Container>
-        <div class="smile-trans-container">
-            <h2>Changing Smiles, Changing Lives</h2>
-            <TransformationSlider client:load/>
-        </div>
-    </Container>
+  <Container>
+    <div class="smile-trans-container">
+      <h2>Changing Smiles, Changing Lives</h2>
+      <TransformationSlider client:load />
+    </div>
+  </Container>
 </section>
 
 <style>
+  #smile-transformations {
+    padding: 6.5rem 1.5rem;
+  }
+
+  .smile-trans-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .smile-trans-container h2 {
+    font-family: "Orelega One", serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
     #smile-transformations {
-        padding: 6.5rem 1.5rem;
+      padding: 3.375rem 1.5rem;
     }
 
     .smile-trans-container {
-        display: flex;
-        flex-direction: column;
-        gap: 3.125rem;
-        justify-content: center;
-        align-items: center;
+      gap: 1.5rem;
+      align-items: center;
     }
 
     .smile-trans-container h2 {
-        font-family: "Orelega One", serif;
-        font-size: 2.5rem;
-        font-weight: 300;
+      font-size: 1.5rem;
+      text-align: center;
     }
-
-    @media (max-width: 768px) {
-        #smile-transformations {
-            padding: 3.375rem 1.5rem;
-        }
-
-        .smile-trans-container {
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .smile-trans-container h2 {
-            font-size: 1.5rem;
-            text-align: center;
-        }
-    }
+  }
 </style>
