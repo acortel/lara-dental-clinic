@@ -32,7 +32,7 @@ export default function TransformationSlider() {
                 breakpoints={{
                     0: { slidesPerView: 1 },
                     768: { slidesPerView: 1 },
-                    1024: { slidesPerView: 1 }
+                    1024: { slidesPerView: 2 }
                 }}
             >
                 {transformations.map((item, index) => (
