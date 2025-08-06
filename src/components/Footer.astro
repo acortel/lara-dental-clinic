@@ -1,181 +1,82 @@
 ---
-// import logo from '../assets/images/logo.png';
-import Container from './Container.astro';
+import Container from "./Container.astro";
 ---
 
 <footer>
-    <Container>
-        <div class="footer-container">
-            <p class="copyright">© 2023 Dr. Lara Dental Clinic. All Rights Reserved. </p>
+  <Container>
+    <div class="footer-container">
+      <p class="copyright">
+        © 2023 Dr. Lara Dental Clinic. All Rights Reserved.
+      </p>
 
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="#hero">Top</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#dentist">Meet the Dentist</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
-    </Container>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#hero">Top</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#dentist">Meet the Dentist</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </Container>
 </footer>
 
 <style>
-    footer {
-        padding: 1rem;
-        overflow:hidden;
-        /* border: 1px solid black; */
-        background-color: #f5f5f5;
-    }
+  footer {
+    padding: 1rem;
+    overflow: hidden;
+    /* border: 1px solid black; */
+    background-color: #f5f5f5;
+  }
 
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright {
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .footer-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .footer-nav li a {
+    font-size: 0.875rem;
+  }
+
+  .footer-nav li a:hover {
+    color: #1dabee;
+  }
+
+  @media (max-width: 768px) {
     .footer-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    .copyright {
-        font-size: .75rem;
-        font-weight: 500;
-        margin: 0;
+      flex-direction: column;
+      gap: 0.625rem;
+      align-items: center;
+      text-align: center;
     }
 
     .footer-nav ul {
-        list-style-type: none;
-        display: flex;
-        gap: 2rem;
+      flex-direction: column;
+      gap: 0.625rem;
     }
 
     .footer-nav li a {
-        font-size: .875rem;
+      font-size: 0.75rem;
     }
 
-    .footer-nav li a:hover {
-        color: #1DABEE;
+    .copyright {
+      order: 2;
+      font-size: 0.625rem;
     }
-
-    @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-            gap: .625rem;
-            align-items: center;
-            text-align: center;
-        }
-
-        .footer-nav ul {
-            flex-direction: column;
-            gap: .625rem;
-        }
-
-        .footer-nav li a {
-            font-size: .75rem;
-        }
-
-        .copyright {
-            order: 2;
-            font-size: .625rem;
-        }
-    }
+  }
 </style>
 
-<!-- 
-<style>
-    .footer {
-        padding: 1rem 0;
-        overflow: hidden;
-        border: 1px solid black;
-    }
-
-    .footer-container {
-        display: flex;
-        justify-content:space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        gap: 5rem;
-        padding: 1rem 2rem;
-    }
-
-    .footer-brand {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        text-align: center;
-    }
-
-    .footer-logo {
-        width: 250px;
-        height: auto;
-    }
-
-    .footer-nav,
-    .footer-contact,
-    .footer-location {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .footer-nav h4,
-    .footer-contact h4,
-    .footer-location h4 {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #F58EBB;
-        margin: 0;
-    }
-
-    .footer-nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .footer-nav li a {
-        font-size: .875rem;
-        font-weight: 300;
-        text-decoration: none;
-    }
-
-    .footer-nav li a:hover {
-        text-decoration: underline;
-        color: #F58EBB;
-    }
-
-    .contact-item a,
-    .footer-location address {
-        font-size: .875rem;
-        font-weight: 400;
-        text-decoration: none;
-    }
-
-    .contact-item a:hover {
-        text-decoration: underline;
-        color: #F58EBB;
-    }
-
-    .copyright {
-        font-size: .75rem;
-        font-weight: 500;
-        margin: 0;
-    }
- 
-    @media (max-width: 768px) {
-        .footer-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 3rem;
-        }
-
-        .footer-nav,
-        .footer-contact,
-        .footer-location {
-            align-items: center;
-        }
-    }
-    
-    
-</style> -->

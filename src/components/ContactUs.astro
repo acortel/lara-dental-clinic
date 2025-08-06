@@ -3,159 +3,174 @@ import Container from "./Container.astro";
 ---
 
 <section id="contact">
-    <Container>
-        <div class="contact-container">
-            <div class="contact-headings">
-                <h2>Take the First Step Toward a Healthier Smile</h2>
-                <h3>Book your appointment with us now</h3>
-            </div>
-            <div class="contact-options">
-                <div class="contact-card">
-                    <img class="card-icon" src="icons/telephone.png" alt="Telephone Icon"/>
-                    <p class="card-title">Call Us</p>
-                    <div class="card-info">
-                        <p>Mon-Fri 5 PM - 7 PM<br>Sat 8 AM - 6 PM</p>
-                        <a class="contact-link" href="tel:+639569887220">+63 956 988 7220</a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <img class="card-icon" src="icons/facebook.png" alt="Facebook Icon"/>
-                    <p class="card-title">Chat via Facebook</p>
-                    <div class="card-info">
-                        <p>Visit our Facebook Page</p>
-                        <a class="contact-link" href="https://www.facebook.com/drlaradentalclinic" target="_blank">Dr. Lara Dental Clinic</a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <img class="card-icon" src="icons/email.png" alt="Email Icon"/>
-                    <p class="card-title">Email Us</p>
-                    <div class="card-info">
-                        <p>Send us an email</p>
-                        <a class="contact-link" href="mailto:larissamsalinas987@gmail.com">larissamsalinas987@gmail.com</a>
-                    </div>
-                </div>
-                <div class="contact-card">
-                    <img class="card-icon" src="icons/gps.png" alt="GPS Icon"/>
-                    <p class="card-title">Visit Us</p>
-                    <div class="card-info">
-                        <p>Pay our clinic a visit</p>
-                        <a class="contact-link" href="https://maps.app.goo.gl/2aBiW5ALSdfStGHu8" target="_blank">View on Google maps</a>
-                    </div>
-                </div>
-            </div>
+  <Container>
+    <div class="contact-container">
+      <div class="contact-headings">
+        <h2>Take the First Step Toward a Healthier Smile</h2>
+        <h3>Book your appointment with us now</h3>
+      </div>
+      <div class="contact-options">
+        <div class="contact-card">
+          <img
+            class="card-icon"
+            src="icons/telephone.png"
+            alt="Telephone Icon"
+          />
+          <p class="card-title">Call Us</p>
+          <div class="card-info">
+            <p>Mon-Fri 5 PM - 7 PM<br />Sat 8 AM - 6 PM</p>
+            <a class="contact-link" href="tel:+639569887220">+63 956 988 7220</a
+            >
+          </div>
         </div>
-    </Container>
+        <div class="contact-card">
+          <img class="card-icon" src="icons/facebook.png" alt="Facebook Icon" />
+          <p class="card-title">Chat via Facebook</p>
+          <div class="card-info">
+            <p>Visit our Facebook Page</p>
+            <a
+              class="contact-link"
+              href="https://www.facebook.com/drlaradentalclinic"
+              target="_blank">Dr. Lara Dental Clinic</a
+            >
+          </div>
+        </div>
+        <div class="contact-card">
+          <img class="card-icon" src="icons/email.png" alt="Email Icon" />
+          <p class="card-title">Email Us</p>
+          <div class="card-info">
+            <p>Send us an email</p>
+            <a class="contact-link" href="mailto:larissamsalinas987@gmail.com"
+              >larissamsalinas987@gmail.com</a
+            >
+          </div>
+        </div>
+        <div class="contact-card">
+          <img class="card-icon" src="icons/gps.png" alt="GPS Icon" />
+          <p class="card-title">Visit Us</p>
+          <div class="card-info">
+            <p>Pay our clinic a visit</p>
+            <a
+              class="contact-link"
+              href="https://maps.app.goo.gl/2aBiW5ALSdfStGHu8"
+              target="_blank">View on Google maps</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
 </section>
 
 <style>
-    #contact {
-        padding: 1.5rem 3.125rem;
-        padding-bottom: 0;
-        background-color: #f5f5f5;
+  #contact {
+    padding: 1.5rem 3.125rem;
+    padding-bottom: 0;
+    background-color: #f5f5f5;
+  }
+
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.125rem;
+  }
+
+  .contact-headings {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-headings h2 {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+
+  .contact-headings h3 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .contact-options {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: left;
+    align-items: center;
+  }
+
+  .contact-card {
+    width: 300px;
+    height: 250px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* border: 1px solid black; */
+    gap: 1.375rem;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+  }
+
+  .card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 0.75rem;
+  }
+
+  .contact-link {
+    color: #f58ebb;
+    font-weight: 600;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .contact-headings {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     .contact-container {
-        display: flex;
-        flex-direction: column;
-        gap: 3.125rem;
-    }
-
-    .contact-headings {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .contact-headings h2 {
-        font-family: "Orelega One", serif;
-        font-weight: 400;
-        font-size: 2.5rem;
-    }
-
-    .contact-headings h3 {
-        text-align: left;
-        font-size: 2rem;
+      gap: 1.5rem;
     }
 
     .contact-options {
-        display: flex;
-        flex-direction: row;
-        gap: 2rem;
-        justify-content: left;
-        align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-headings h2 {
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
+    .contact-headings h3 {
+      text-align: center;
+      font-size: 1rem;
     }
 
     .contact-card {
-        width: 300px;
-        height: 250px;
-        padding: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        /* border: 1px solid black; */
-        gap: 1.375rem;
-    }
-
-    .card-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .card-title {
-        font-family: "Orelega One", serif;
-        font-weight: 400;
-        font-size: 1.25rem;
+      width: 250;
+      height: 200;
+      align-items: center;
     }
 
     .card-info {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        justify-content: center;
-        align-items: flex-start;
-        font-size: .75rem;
+      align-items: center;
+      text-align: center;
     }
-
-    .contact-link {
-        color: #F58EBB;
-        font-weight: 600;
-        text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-        .contact-headings {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-
-        .contact-container {
-            gap: 1.5rem;
-        }
-
-        .contact-options {
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-headings h2{
-            text-align: center;
-            font-size: 1.5rem;
-        }
-
-        .contact-headings h3{
-            text-align: center;
-            font-size: 1rem;
-        }
-        
-        .contact-card {
-            width: 250;
-            height: 200;
-            align-items: center;
-        }
-
-        .card-info {
-            align-items: center;
-            text-align: center;
-        }
-    }
+  }
 </style>

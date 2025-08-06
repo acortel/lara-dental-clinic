@@ -1,22 +1,21 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-padding: 100px;
-    scroll-behavior: smooth;
+  scroll-padding: 100px;
+  scroll-behavior: smooth;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    color: #1a1a1a;
-    background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+  color: #1a1a1a;
+  background-color: #fafafa;
 }
-

@@ -1,138 +1,132 @@
 ---
-import Container from './Container.astro'
-import ButtonCTA from './ButtonCTA.astro'
+import Container from "./Container.astro";
+import ButtonCTA from "./ButtonCTA.astro";
 ---
 
-
 <header class="navbar">
-    <Container>
-        <div class="nav-container">
-            <a href="#hero" class="logo">
-                <img src='/logo.png' alt="Clinic Logo" class="logo-img" />
-            </a>
+  <Container>
+    <div class="nav-container">
+      <a href="#hero" class="logo">
+        <img src="/logo.png" alt="Clinic Logo" class="logo-img" />
+      </a>
 
-            <nav class="nav-links" id="nav-links">
-                <a href="#about">About</a>
-                <a href="#dentist">Meet the Dentist</a>
-                <a href="#services">Our Services</a>
-                <ButtonCTA href="#contact" text="Book Now"/>
-            </nav>
+      <nav class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#dentist">Meet the Dentist</a>
+        <a href="#services">Our Services</a>
+        <ButtonCTA href="#contact" text="Book Now" />
+      </nav>
 
-            <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </Container>  
+      <div class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </Container>
 </header>
 
-
-
 <style>
-    .navbar {
-        width: 100%;
-        padding: 1.5rem 0;
-        margin: 0;
-        background-color: #fafafa;
-        position: sticky;
-        top: 0;
-        z-index: 50;
-        /* border: 1px solid black; */
-    }
+  .navbar {
+    width: 100%;
+    padding: 1.5rem 0;
+    margin: 0;
+    background-color: #fafafa;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    /* border: 1px solid black; */
+  }
 
+  .nav-container {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo-img {
+    height: 60px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  .nav-links a:hover {
+    color: #1dabee;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    z-index: 51;
+  }
+
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #f58ebb;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  @media (max-width: 768px) {
     .nav-container {
-        padding: 0 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .logo-img {
-        height: 60px;
-        width: auto;
-        display: block;
+      padding: 0;
     }
 
     .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 2rem;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      height: 100vh;
+      width: 50%;
+      background: #fafafa;
+      flex-direction: column;
+      justify-content: baseline;
+      padding-top: 25%;
+      gap: 1rem;
+      transition: right 0.3s ease-in-out;
     }
 
-    .nav-links a {
-        font-size: 1rem;
+    .nav-links.open {
+      right: 0;
     }
-
-    .nav-links a:hover {
-        color: #1DABEE;
-    }
-
 
     .hamburger {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        background: none;
-        border: none;
-        z-index: 51;
+      display: flex;
     }
 
-    .bar {
-        width: 25px;
-        height: 3px;
-        background-color: #F58EBB;
-        border-radius: 2px;
-        transition: all 0.3s ease;
+    .hamburger.open .bar:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
     }
-
-
-    @media (max-width: 768px) {
-        .nav-container {
-            padding: 0;
-        }
-
-        .nav-links {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            height: 100vh;
-            width: 50%;
-            background: #fafafa;
-            flex-direction: column;
-            justify-content: baseline;
-            padding-top: 25%;
-            gap: 1rem;
-            transition: right 0.3s ease-in-out;
-        }
-
-        .nav-links.open {
-            right: 0;
-        }
-
-        .hamburger {
-            display: flex;
-        }
-
-        .hamburger.open .bar:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .hamburger.open .bar:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.open .bar:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
+    .hamburger.open .bar:nth-child(2) {
+      opacity: 0;
     }
+    .hamburger.open .bar:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
 </style>
 
 <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById("nav-links")
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("nav-links");
 
-    hamburger?.addEventListener('click', () => {
-        navLinks?.classList.toggle('open');
-        hamburger.classList.toggle('open');
-    })
-
+  hamburger?.addEventListener("click", () => {
+    navLinks?.classList.toggle("open");
+    hamburger.classList.toggle("open");
+  });
 </script>

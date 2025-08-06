@@ -4,44 +4,44 @@ import ServiceCards from "./ServiceCards.astro";
 ---
 
 <section id="services">
-    <Container>
-        <div class="services-container">
-            <h2>Our Services</h2>
-            <ServiceCards />
-        </div>
-    </Container>
+  <Container>
+    <div class="services-container">
+      <h2>Our Services</h2>
+      <ServiceCards />
+    </div>
+  </Container>
 </section>
 
 <style>
+  #services {
+    padding: 3.375rem 6.5rem;
+  }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3.125rem;
+  }
+
+  .services-container h2 {
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
     #services {
-        padding: 3.375rem 6.5rem;
+      padding: 3.375rem 1.5rem;
     }
 
     .services-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3.125rem;
+      gap: 1.5rem;
     }
 
     .services-container h2 {
-        font-family: "Orelega One", serif;
-        font-weight: 400;
-        font-size: 2.5rem;
+      font-size: 1.5rem;
     }
-
-    @media (max-width: 768px) {
-        #services {
-            padding: 3.375rem 1.5rem
-        }
-
-        .services-container {
-            gap: 1.5rem;
-        }
-
-        .services-container h2 {
-            font-size: 1.5rem;
-        }
-    }
+  }
 </style>
