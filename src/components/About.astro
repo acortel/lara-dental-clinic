@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
 import Container from "./Container.astro";
-import aboutImage from '../assets/images/about-img.jpg';
+import aboutImage from "../assets/images/about-img.jpg";
 ---
 
-<section id="about">
+<section id="about" aria-labelledby="about-heading">
   <Container>
     <div class="about-container">
       <div class="about-img">
@@ -15,7 +15,7 @@ import aboutImage from '../assets/images/about-img.jpg';
         <Image src={aboutImage} alt="Dr. Lara with her smiling patient" />
       </div>
       <div class="about-text">
-        <h2>Committed to Caring Smiles and Lasting Trust</h2>
+        <h2 id="about-heading">Committed to Caring Smiles and Lasting Trust</h2>
         <p>
           Our clinic is built on a simple promise—to care for every smile like
           it’s part of our own family. We believe that visiting the dentist
@@ -33,7 +33,9 @@ import aboutImage from '../assets/images/about-img.jpg';
 
 <style>
   #about {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
+    max-width: 1440px;
+    margin-inline: auto;
   }
 
   .about-container {
@@ -67,7 +69,7 @@ import aboutImage from '../assets/images/about-img.jpg';
 
   .about-text h2 {
     font-family: "Orelega One", serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2.5rem;
   }
 

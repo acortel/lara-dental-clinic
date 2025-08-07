@@ -7,17 +7,14 @@ import { Image } from "astro:assets";
 
 const transformations = [
   {
-    name: "Patient A",
     before: "/images/transformations/patient-a-before.png",
     after: "/images/transformations/patient-a-after.png",
   },
   {
-    name: "Patient B",
-    before: "/images/transformations/patient-a-before.png",
-    after: "/images/transformations/patient-a-after.png",
+    before: "/images/transformations/patient-b-before.jpg",
+    after: "/images/transformations/patient-b-after.jpg",
   },
   {
-    name: "Patient C",
     before: "/images/transformations/patient-a-before.png",
     after: "/images/transformations/patient-a-after.png",
   },
@@ -55,7 +52,6 @@ export default function TransformationSlider() {
                   loading="lazy"
                 />
               </div>
-              <h3>{item.name}</h3>
             </div>
           </SwiperSlide>
         ))}

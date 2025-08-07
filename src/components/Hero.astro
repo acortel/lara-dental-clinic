@@ -3,7 +3,7 @@ import ButtonCTA from "./ButtonCTA.astro";
 import Container from "./Container.astro";
 ---
 
-<section id="hero">
+<section id="hero" role="banner">
   <Container>
     <div class="hero-container">
       <h1>Your Smile, Our Priority</h1>
@@ -21,6 +21,7 @@ import Container from "./Container.astro";
     background-position: center;
     background-repeat: no-repeat;
     padding: 6.5rem 1.5rem;
+    min-height: 100vh;
   }
 
   .hero-container {
@@ -50,6 +51,7 @@ import Container from "./Container.astro";
   @media (max-width: 768px) {
     #hero {
       padding: 3.375rem 1.5rem;
+      min-height: fit-content;
     }
 
     .hero-container {
@@ -57,12 +59,11 @@ import Container from "./Container.astro";
     }
 
     .hero-container h1 {
-      font-size: 2rem;
+      font-size: clamp(2rem, 5vw, 4rem);
     }
 
     .hero-container h2 {
-      font-size: 1.25rem;
+      font-size: clamp(1.25rem, 3vw, 2.5rem);
     }
   }
 </style>
-

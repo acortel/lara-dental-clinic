@@ -22,6 +22,9 @@ import ButtonCTA from "./ButtonCTA.astro";
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
+
+      <!--Overlay-->
+      <div class="overlay" id="overlay"></div>
     </div>
   </Container>
 </header>
@@ -38,6 +41,21 @@ import ButtonCTA from "./ButtonCTA.astro";
     /* border: 1px solid black; */
   }
 
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 51;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
   .nav-container {
     padding: 0 1rem;
     display: flex;
@@ -46,15 +64,17 @@ import ButtonCTA from "./ButtonCTA.astro";
   }
 
   .logo-img {
-    height: 60px;
+    max-height: 48px;
     width: auto;
     display: block;
+    vertical-align: middle;
   }
 
   .nav-links {
     display: flex;
     align-items: center;
     gap: 2rem;
+    z-index: 53;
   }
 
   .nav-links a {
@@ -71,7 +91,7 @@ import ButtonCTA from "./ButtonCTA.astro";
     gap: 5px;
     background: none;
     border: none;
-    z-index: 51;
+    z-index: 54;
   }
 
   .bar {
@@ -85,6 +105,10 @@ import ButtonCTA from "./ButtonCTA.astro";
   @media (max-width: 768px) {
     .nav-container {
       padding: 0;
+    }
+
+    .logo-img {
+      max-height: 40px;
     }
 
     .nav-links {
@@ -124,9 +148,25 @@ import ButtonCTA from "./ButtonCTA.astro";
 <script>
   const hamburger = document.getElementById("hamburger");
   const navLinks = document.getElementById("nav-links");
+  const overlay = document.getElementById("overlay");
 
   hamburger?.addEventListener("click", () => {
     navLinks?.classList.toggle("open");
     hamburger.classList.toggle("open");
+    overlay?.classList.toggle("active");
+  });
+
+  overlay?.addEventListener("click", () => {
+    overlay.classList.toggle("active");
+    navLinks?.classList.toggle("open");
+    hamburger?.classList.toggle("open");
+  });
+
+  document.querySelectorAll(".nav-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks?.classList.remove("open");
+      hamburger?.classList.remove("open");
+      overlay?.classList.remove("active");
+    });
   });
 </script>
